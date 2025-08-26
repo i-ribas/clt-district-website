@@ -1,6 +1,6 @@
-const html = document.documentElement;
-
 window.addEventListener("DOMContentLoaded", () => {
+  // DARK MODE TOGGLE
+  const html = document.documentElement;
   const button = document.getElementById("theme-toggle");
 
   if (!button) {
@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // Check system preference
   button.addEventListener("click", () => {
     html.classList.toggle("dark");
     localStorage.setItem(
@@ -20,4 +21,6 @@ window.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("theme") === "dark") {
     html.classList.add("dark");
   }
+
+  //TODO: HAMBURGER MENU TOGGLE
 });
