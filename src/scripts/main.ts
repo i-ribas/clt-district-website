@@ -22,5 +22,14 @@ window.addEventListener("DOMContentLoaded", () => {
     html.classList.add("dark");
   }
 
+  // INTERACTABLE LOGO CLICK SOUND
+  const interactLogo = document.getElementById("interact-logo");
+
+  if (interactLogo) {
+    interactLogo.addEventListener("click", () => {
+      new Audio("./src/assets/audio/huh.m4a").play();
+    });
+  }
+
   //TODO: HAMBURGER MENU TOGGLE
 });
