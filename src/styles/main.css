@@ -12,6 +12,10 @@ body {
   font-family: "Pretendard", comic-sans;
 }
 
+#interact-logo:active {
+  animation: pulse 0.25s;
+}
+
 /*
 * {
   outline: 1px solid red;
