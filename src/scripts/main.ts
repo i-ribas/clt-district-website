@@ -1,26 +1,48 @@
 window.addEventListener("DOMContentLoaded", () => {
   // DARK MODE TOGGLE
   const html = document.documentElement;
-  const button = document.getElementById("theme-toggle");
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  const themeToggleIcon = document.getElementById("theme-icon");
 
-  if (!button) {
-    console.error("Theme toggle button not found! What??");
+  if (!themeToggleBtn) {
+    console.error("Theme toggle button not found!");
     return;
   }
 
-  // Check system preference
-  button.addEventListener("click", () => {
+  // A helper to update the icon based on current theme
+  function updateThemeIcon() {
+    if (!themeToggleIcon) {
+      console.error("Theme toggle icon not found!");
+      return;
+    }
+
+    if (html.classList.contains("dark")) {
+      themeToggleIcon.classList.remove("fa-sun");
+      themeToggleIcon.classList.add("fa-moon");
+    } else {
+      themeToggleIcon.classList.remove("fa-moon");
+      themeToggleIcon.classList.add("fa-sun");
+    }
+  }
+
+  // Apply saved preference on load
+  if (localStorage.getItem("theme") === "dark") {
+    html.classList.add("dark");
+  }
+  updateThemeIcon();
+
+  // Handle click toggle
+  themeToggleBtn.addEventListener("click", () => {
     html.classList.toggle("dark");
+
+    // Save preference
     localStorage.setItem(
       "theme",
       html.classList.contains("dark") ? "dark" : "light"
     );
-  });
 
-  // Apply saved preference
-  if (localStorage.getItem("theme") === "dark") {
-    html.classList.add("dark");
-  }
+    updateThemeIcon();
+  });
 
   // INTERACTABLE LOGO CLICK SOUND
   const interactLogo = document.getElementById("interact-logo");
