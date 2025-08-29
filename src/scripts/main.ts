@@ -49,7 +49,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (interactLogo) {
     interactLogo.addEventListener("click", () => {
-      new Audio("./src/assets/audio/huh.m4a").play();
+      const sounds = [
+        "./src/assets/audio/huh.m4a",
+        "./src/assets/audio/scream.m4a",
+      ];
+
+      const sfxRandomIndex = Math.floor(Math.random() * sounds.length);
+      new Audio(sounds[sfxRandomIndex]).play();
     });
   }
 
