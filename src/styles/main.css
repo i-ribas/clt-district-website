@@ -8,6 +8,11 @@
   font-weight: 200;
 }
 
+/* CHROME, IE SCROLLBAR LOOKS UGLY SO I KILLED THEM!!!! */
+::-webkit-scrollbar {
+  width: 0rem;
+}
+
 body {
   font-family: "Pretendard", comic-sans;
 }

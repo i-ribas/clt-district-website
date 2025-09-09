@@ -59,5 +59,9 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.getElementById("scroll-down")?.addEventListener("click", () => {
+    const nextSection = document.querySelector("main section:nth-child(2)");
+    nextSection?.scrollIntoView({ behavior: "smooth" });
+  });
   //TODO: HAMBURGER MENU TOGGLE
 });
