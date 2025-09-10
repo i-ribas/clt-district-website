@@ -93,14 +93,8 @@ window.addEventListener("DOMContentLoaded", () => {
       // Fade in background
       mobileMenu.classList.remove("opacity-0", "pointer-events-none");
       mobileMenu.classList.add("opacity-100", "pointer-events-auto");
+      hamburger.classList.add("hamburger-open"); // morph into "X"
 
-      const icon = hamburger.querySelector("i");
-      if (icon) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-      }
-
-      // Animate links + appearance (sliding down & fading in)
       requestAnimationFrame(() => {
         links?.classList.remove("opacity-0", "translate-y-[-20px]");
         links?.classList.add("opacity-100", "translate-y-0");
@@ -112,14 +106,8 @@ window.addEventListener("DOMContentLoaded", () => {
       // Fade out background
       mobileMenu.classList.remove("opacity-100", "pointer-events-auto");
       mobileMenu.classList.add("opacity-0", "pointer-events-none");
+      hamburger.classList.remove("hamburger-open"); // morph back into bars
 
-      const icon = hamburger.querySelector("i");
-      if (icon) {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-      }
-
-      // Reset links + appearance instantly (so they re-animate next time)
       links?.classList.add("opacity-0", "translate-y-[-20px]");
       links?.classList.remove("opacity-100", "translate-y-0");
 

@@ -65,8 +65,19 @@
         </div>
 
         <!-- Mobile Hamburger -->
-        <button id="hamburger" class="md:hidden text-white text-2xl z-2">
-          <i class="fas fa-bars"></i>
+        <button
+          id="hamburger"
+          class="relative w-15 h-10 flex flex-col justify-center items-center gap-2 group"
+        >
+          <span
+            class="line w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="line w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="line w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
         </button>
       </nav>
     </header>
@@ -74,7 +85,7 @@
     <!-- Fullscreen Mobile Menu -->
     <div
       id="mobile-menu"
-      class="fixed inset-0 bg-sky-950 text-white flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
+      class="fixed inset-0 bg-sky-950 text-white border-4 border-t-85 dark:border-zinc-800 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
     >
       <!-- Menu Links -->
       <ul
