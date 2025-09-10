@@ -50,7 +50,33 @@
         </ul>
 
         <!-- Right: Dark Mode Toggle -->
-        <div class="flex-1 hidden md:flex justify-end">
+        <div class="flex-1 hidden md:flex justify-end items-center space-x-4">
+          <span class="border-r-1 border-gray-300 mr-6 flex">
+            <!-- GitHub -->
+            <a
+              href="https://github.com/Eike-Felipe/CLT-District_Limbus-Brasil"
+              target="_blank"
+              class="flex items-center justify-center mr-6"
+              aria-label="GitHub"
+            >
+              <i
+                class="fab fa-github text-2xl text-gray-300 hover:text-white"
+              ></i>
+            </a>
+
+            <!-- Discord -->
+            <a
+              href="https://discord.gg/upV3yFUyRY"
+              target="_blank"
+              class="flex items-center justify-center mr-6"
+              aria-label="Discord"
+            >
+              <i
+                class="fab fa-discord text-2xl text-gray-300 hover:text-white"
+              ></i>
+            </a>
+          </span>
+
           <button
             role="switch"
             id="theme-toggle"
@@ -67,7 +93,7 @@
         <!-- Mobile Hamburger -->
         <button
           id="hamburger"
-          class="relative w-15 h-10 flex flex-col justify-center items-center gap-2 group"
+          class="md:hidden relative w-15 h-10 flex flex-col justify-center items-center gap-2 group"
         >
           <span
             class="line w-6 h-0.5 bg-white transition-all duration-300"
@@ -83,6 +109,8 @@
     </header>
 
     <!-- Fullscreen Mobile Menu -->
+    <!-- this looks genuinely hideous please find another way to give feedback to the user from the menu that the appearance has changed (or come up with a better header design)-->
+    <!-- those border-b's also look bad -->
     <div
       id="mobile-menu"
       class="fixed inset-0 bg-sky-950 text-white border-4 border-t-85 dark:border-zinc-800 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
@@ -92,15 +120,15 @@
         id="mobile-menu-links"
         class="text-2xl font-semibold space-y-6 text-center opacity-0 translate-y-[-20px] transition-all duration-500"
       >
-        <li>
+        <li class="border-b-1 border-gray-400 pb-1">
           <a href="limbuscompany.html" class="hover:text-gray-300"
             >Limbus Company</a
           >
         </li>
-        <li>
+        <li class="border-b-1 border-gray-400 pb-1">
           <a href="leviathan.html" class="hover:text-gray-300">Leviatã</a>
         </li>
-        <li>
+        <li class="border-b-1 border-gray-400 pb-1">
           <a href="distortiondetective.html" class="hover:text-gray-300"
             >Detetive da Distorção</a
           >
@@ -113,7 +141,7 @@
         class="mt-10 opacity-0 translate-y-[-20px] transition-all duration-500"
       >
         <div
-          class="bg-sky-800 px-6 py-3 rounded-xl flex items-center justify-between w-72"
+          class="bg-sky-900 px-6 py-3 rounded-xl flex items-center justify-between w-72"
         >
           <span class="text-lg">Aparência</span>
           <button
@@ -131,6 +159,32 @@
             </span>
           </button>
         </div>
+      </div>
+
+      <!-- GitHub + Discord Row -->
+      <div
+        id="mobile-menu-socials"
+        class="flex space-x-6 mt-10 opacity-0 translate-y-[-20px] transition-all duration-500"
+      >
+        <!-- GitHub -->
+        <a
+          href="https://github.com/Eike-Felipe/CLT-District_Limbus-Brasil"
+          target="_blank"
+          class="flex items-center justify-center"
+          aria-label="GitHub"
+        >
+          <i class="fab fa-github text-3xl text-gray-300 hover:text-white"></i>
+        </a>
+
+        <!-- Discord -->
+        <a
+          href="https://discord.gg/upV3yFUyRY"
+          target="_blank"
+          class="flex items-center justify-center"
+          aria-label="Discord"
+        >
+          <i class="fab fa-discord text-3xl text-gray-300 hover:text-white"></i>
+        </a>
       </div>
     </div>
 
@@ -173,21 +227,21 @@
       <section
         class="h-screen flex justify-center items-center bg-gray-100 dark:bg-zinc-700 snap-start"
       >
-        <h2 class="text-3xl font-bold">Segunda seção</h2>
+        <h2 class="text-3xl font-bold">Projetos e Progresso</h2>
       </section>
 
       <!-- Section 3 -->
       <section
         class="h-screen flex justify-center items-center bg-gray-200 dark:bg-zinc-600 snap-start"
       >
-        <h2 class="text-3xl font-bold">Terceira seção</h2>
+        <h2 class="text-3xl font-bold">Perguntas Frequentes</h2>
       </section>
 
       <!-- Section 4 -->
       <section
         class="h-screen flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start"
       >
-        <h2 class="text-3xl font-bold">Quarta seção</h2>
+        <h2 class="text-3xl font-bold">Contato/Créditos/Ko-fi</h2>
       </section>
     </main>
   </body>

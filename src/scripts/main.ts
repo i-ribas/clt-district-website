@@ -88,6 +88,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const links = document.getElementById("mobile-menu-links");
     const appearance = document.getElementById("mobile-menu-appearance");
+    const socials = document.getElementById("mobile-menu-socials");
 
     if (menuOpen) {
       // Fade in background
@@ -96,11 +97,17 @@ window.addEventListener("DOMContentLoaded", () => {
       hamburger.classList.add("hamburger-open"); // morph into "X"
 
       requestAnimationFrame(() => {
+        // Animate links
         links?.classList.remove("opacity-0", "translate-y-[-20px]");
         links?.classList.add("opacity-100", "translate-y-0");
 
+        // Animate appearance toggle
         appearance?.classList.remove("opacity-0", "translate-y-[-20px]");
         appearance?.classList.add("opacity-100", "translate-y-0");
+
+        // Animate socials row
+        socials?.classList.remove("opacity-0", "translate-y-[-20px]");
+        socials?.classList.add("opacity-100", "translate-y-0");
       });
     } else {
       // Fade out background
@@ -108,11 +115,17 @@ window.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.add("opacity-0", "pointer-events-none");
       hamburger.classList.remove("hamburger-open"); // morph back into bars
 
+      // Reset links
       links?.classList.add("opacity-0", "translate-y-[-20px]");
       links?.classList.remove("opacity-100", "translate-y-0");
 
+      // Reset appearance toggle
       appearance?.classList.add("opacity-0", "translate-y-[-20px]");
       appearance?.classList.remove("opacity-100", "translate-y-0");
+
+      // Reset socials row
+      socials?.classList.add("opacity-0", "translate-y-[-20px]");
+      socials?.classList.remove("opacity-100", "translate-y-0");
     }
   }
 
@@ -129,7 +142,9 @@ window.addEventListener("DOMContentLoaded", () => {
   // Close menu on window resize if above md breakpoint
   window.addEventListener("resize", () => {
     // Tailwind's md breakpoint is 768px
-    if (window.innerWidth >= 768 && menuOpen) {
+    const TAILWIND_MDBREAKPOINT = 768;
+
+    if (window.innerWidth >= TAILWIND_MDBREAKPOINT && menuOpen) {
       toggleMenu(true); // force close
     }
   });
