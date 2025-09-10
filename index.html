@@ -12,8 +12,8 @@
     <script type="module" src="src/scripts/main.ts"></script>
     <title>CLT District</title>
   </head>
-  <body>
-    <header class="fixed w-full p-4 bg-sky-950">
+  <body class="dark:bg-zinc-800">
+    <header class="fixed w-full p-4 bg-sky-950 z-2">
       <!-- Navbar -->
       <nav class="flex items-center">
         <!-- Left: Logo + Title -->
@@ -31,21 +31,19 @@
         </div>
 
         <!-- Center: Desktop Menu -->
-        <ul class="hidden md:flex justify-center space-x-6 text-gray-200">
+        <ul
+          class="hidden md:flex justify-center space-x-6 text-gray-200 font-semibold"
+        >
           <li>
-            <a href="limbuscompany.html" class="hover:text-white font-semibold"
+            <a href="limbuscompany.html" class="hover:text-white"
               >Limbus Company</a
             >
           </li>
           <li>
-            <a href="leviathan.html" class="hover:text-white font-semibold"
-              >Leviatã</a
-            >
+            <a href="leviathan.html" class="hover:text-white">Leviatã</a>
           </li>
           <li>
-            <a
-              href="distortiondetective.html"
-              class="hover:text-white font-semibold"
+            <a href="distortiondetective.html" class="hover:text-white"
               >Detetive da Distorção</a
             >
           </li>
@@ -59,7 +57,7 @@
             class="cursor-pointer relative w-14 h-8 rounded-full bg-gray-300 dark:bg-gray-600 transition"
           >
             <span
-              class="absolute left-1 top-1 w-6 h-6 rounded-full bg-white shadow flex items-center justify-center transform transition dark:translate-x-6"
+              class="absolute left-1 top-1 w-6 h-6 rounded-full bg-white shadow flex items-center justify-center transition dark:translate-x-6"
             >
               <i id="theme-icon" class="fa-solid text-gray-600 text-sm"></i>
             </span>
@@ -67,11 +65,63 @@
         </div>
 
         <!-- Mobile Hamburger -->
-        <button id="hamburger" class="md:hidden text-white text-2xl">
+        <button id="hamburger" class="md:hidden text-white text-2xl z-2">
           <i class="fas fa-bars"></i>
         </button>
       </nav>
     </header>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-sky-950 text-white flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
+    >
+      <!-- Menu Links -->
+      <ul
+        id="mobile-menu-links"
+        class="text-2xl font-semibold space-y-6 text-center opacity-0 translate-y-[-20px] transition-all duration-500"
+      >
+        <li>
+          <a href="limbuscompany.html" class="hover:text-gray-300"
+            >Limbus Company</a
+          >
+        </li>
+        <li>
+          <a href="leviathan.html" class="hover:text-gray-300">Leviatã</a>
+        </li>
+        <li>
+          <a href="distortiondetective.html" class="hover:text-gray-300"
+            >Detetive da Distorção</a
+          >
+        </li>
+      </ul>
+
+      <!-- Appearance Toggle -->
+      <div
+        id="mobile-menu-appearance"
+        class="mt-10 opacity-0 translate-y-[-20px] transition-all duration-500"
+      >
+        <div
+          class="bg-sky-800 px-6 py-3 rounded-xl flex items-center justify-between w-72"
+        >
+          <span class="text-lg">Aparência</span>
+          <button
+            role="switch"
+            id="theme-toggle-mobile"
+            class="cursor-pointer relative w-14 h-8 rounded-full bg-gray-300 dark:bg-gray-600"
+          >
+            <span
+              class="absolute left-1 top-1 w-6 h-6 rounded-full bg-white shadow flex items-center justify-center transition dark:translate-x-6"
+            >
+              <i
+                id="theme-icon-mobile"
+                class="fa-solid text-gray-600 text-sm"
+              ></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <main
       class="snap-y snap-mandatory h-screen overflow-y-auto scroll-smooth dark:text-white"
@@ -89,14 +139,12 @@
         <p class="m-5 text-2xl sm:text-4xl max-w-md sm:max-w-xl">
           Bem-vindos ao site da CLT District!
         </p>
-
         <p class="m-6 text-base sm:text-xl max-w-md sm:max-w-2xl">
           A CLT District é uma equipe independente dedicada a tornar acessíveis
           as obras da Project Moon para o público brasileiro, desde seus jogos
           até webcomics. Nosso trabalho é feito de fã para fã e não tem fins
           lucrativos.
         </p>
-
         <p class="m-6 text-base sm:text-xl max-w-md sm:max-w-2xl text-gray-400">
           © 2025 CLT District
         </p>
