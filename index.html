@@ -12,8 +12,10 @@
     <script type="module" src="src/scripts/main.ts"></script>
     <title>CLT District</title>
   </head>
-  <body class="dark:bg-zinc-800">
-    <header class="fixed w-full p-4 bg-sky-950 z-2">
+  <body>
+    <header
+      class="fixed w-full p-4 bg-sky-950 border-b-5 border-gray-900 dark:border-b-1 dark:border-gray-200 z-2"
+    >
       <!-- Navbar -->
       <nav class="flex items-center">
         <!-- Left: Logo + Title -->
@@ -50,7 +52,9 @@
         </ul>
 
         <!-- Right: Dark Mode Toggle -->
-        <div class="flex-1 hidden md:flex justify-end items-center space-x-4">
+        <div
+          class="flex-1 hidden md:flex justify-end items-center space-x-4 mx-2"
+        >
           <span class="border-r-1 border-gray-300 mr-6 flex">
             <!-- GitHub -->
             <a
@@ -113,7 +117,7 @@
     <!-- those border-b's also look bad -->
     <div
       id="mobile-menu"
-      class="fixed inset-0 bg-sky-950 text-white border-4 border-t-85 dark:border-zinc-800 flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
+      class="fixed inset-0 bg-gray-200 dark:bg-zinc-800 dark:text-white flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
     >
       <!-- Menu Links -->
       <ul
@@ -141,7 +145,7 @@
         class="mt-10 opacity-0 translate-y-[-20px] transition-all duration-500"
       >
         <div
-          class="bg-sky-900 px-6 py-3 rounded-xl flex items-center justify-between w-72"
+          class="bg-gray-400 dark:bg-zinc-900 px-6 py-3 rounded-xl flex items-center justify-between w-72"
         >
           <span class="text-lg">Aparência</span>
           <button
@@ -173,7 +177,9 @@
           class="flex items-center justify-center"
           aria-label="GitHub"
         >
-          <i class="fab fa-github text-3xl text-gray-300 hover:text-white"></i>
+          <i
+            class="fab fa-github text-3xl text-gray-500 dark:text-gray-300 hover:text-white"
+          ></i>
         </a>
 
         <!-- Discord -->
@@ -183,7 +189,9 @@
           class="flex items-center justify-center"
           aria-label="Discord"
         >
-          <i class="fab fa-discord text-3xl text-gray-300 hover:text-white"></i>
+          <i
+            class="fab fa-discord text-3xl text-gray-500 dark:text-gray-300 hover:text-white"
+          ></i>
         </a>
       </div>
     </div>
@@ -193,7 +201,7 @@
     >
       <!-- Section 1 -->
       <section
-        class="relative h-screen flex flex-col justify-center items-center px-4 text-center bg-white dark:bg-zinc-800 snap-start"
+        class="relative h-screen flex flex-col justify-center items-center px-4 text-center bg-white dark:bg-zinc-800 snap-start section-paper"
       >
         <img
           src="src/assets/images/clt.png"
@@ -201,18 +209,20 @@
           alt="Logo da CLT District"
           id="interact-logo"
         />
-        <p class="m-5 text-2xl sm:text-4xl max-w-md sm:max-w-xl">
-          Bem-vindos ao site da CLT District!
-        </p>
-        <p class="m-6 text-base sm:text-xl max-w-md sm:max-w-2xl">
-          A CLT District é uma equipe independente dedicada a tornar acessíveis
-          as obras da Project Moon para o público brasileiro, desde seus jogos
-          até webcomics. Nosso trabalho é feito de fã para fã e não tem fins
-          lucrativos.
-        </p>
-        <p class="m-6 text-base sm:text-xl max-w-md sm:max-w-2xl text-gray-400">
-          © 2025 CLT District
-        </p>
+        <article
+          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl"
+        >
+          <h1 class="m-7 text-2xl sm:text-4xl max-w-xl">
+            Bem-vindos ao site da CLT District!
+          </h1>
+          <h2 class="m-2">
+            A CLT District é uma equipe independente dedicada a tornar
+            acessíveis as obras da Project Moon para o público brasileiro, desde
+            seus jogos até webcomics. Nosso trabalho é feito de fã para fã e não
+            tem fins lucrativos.
+          </h2>
+          <h3 class="m-6 text-gray-400">© 2025 CLT District</h3>
+        </article>
 
         <!-- Down Arrow -->
         <div
@@ -225,23 +235,29 @@
 
       <!-- Section 2 -->
       <section
-        class="h-screen flex justify-center items-center bg-gray-100 dark:bg-zinc-700 snap-start"
+        class="h-screen flex justify-center items-center bg-gray-100 dark:bg-zinc-700 snap-start section-paper"
       >
-        <h2 class="text-3xl font-bold">Projetos e Progresso</h2>
+        <article>
+          <h1 class="text-3xl font-bold">Projetos e Progresso</h1>
+        </article>
       </section>
 
       <!-- Section 3 -->
       <section
-        class="h-screen flex justify-center items-center bg-gray-200 dark:bg-zinc-600 snap-start"
+        class="h-screen flex justify-center items-center bg-gray-200 dark:bg-zinc-600 snap-start section-paper"
       >
-        <h2 class="text-3xl font-bold">Perguntas Frequentes</h2>
+        <article>
+          <h1 class="text-3xl font-bold">Perguntas Frequentes</h1>
+        </article>
       </section>
 
       <!-- Section 4 -->
       <section
-        class="h-screen flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start"
+        class="h-screen flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start section-paper"
       >
-        <h2 class="text-3xl font-bold">Contato/Créditos/Ko-fi</h2>
+        <article>
+          <h1 class="text-3xl font-bold">Contato/Créditos/Ko-fi</h1>
+        </article>
       </section>
     </main>
   </body>

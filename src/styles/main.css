@@ -27,6 +27,33 @@ body {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
+/* texture overlay on top of the section background but underneath content */
+.section-paper {
+  position: relative;
+  isolation: isolate; /* ensures blend stays inside this section only */
+  overflow: hidden;
+}
+
+.section-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/paper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: multiply;
+}
+
+/* Flip every even section horizontally, makes it look less repetitive */
+.section-paper:nth-of-type(even)::before {
+  transform: scaleX(-1);
+}
+
 #interact-logo:active {
   animation: pulse 0.25s;
 }
