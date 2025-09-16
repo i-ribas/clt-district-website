@@ -34,16 +34,16 @@ body {
   overflow: hidden;
 }
 
-.section-paper::before {
+.section-paper::before,
+.paper::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url("/paper.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 
-  opacity: 0.05;
+  opacity: 0.06;
   pointer-events: none;
   z-index: 0;
   mix-blend-mode: multiply;

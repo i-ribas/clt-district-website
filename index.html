@@ -26,7 +26,7 @@
               class="mr-3 h-12"
               alt="Logo da CLT District"
             />
-            <span class="text-xl font-semibold text-gray-200 mr-8">
+            <span class="text-xl font-semibold text-gray-200 mr-20">
               CLT District
             </span>
           </a>
@@ -60,11 +60,23 @@
             <a
               href="https://github.com/Eike-Felipe/CLT-District_Limbus-Brasil"
               target="_blank"
-              class="flex items-center justify-center mr-6"
+              class="flex items-center justify-center mx-6"
               aria-label="GitHub"
             >
               <i
                 class="fab fa-github text-2xl text-gray-300 hover:text-white"
+              ></i>
+            </a>
+
+            <!-- Steam -->
+            <a
+              href="https://steamcommunity.com/profiles/76561199881432729/"
+              target="_blank"
+              class="flex items-center justify-center mr-6"
+              aria-label="Steam"
+            >
+              <i
+                class="fab fa-steam text-2xl text-gray-300 hover:text-white"
               ></i>
             </a>
 
@@ -113,11 +125,9 @@
     </header>
 
     <!-- Fullscreen Mobile Menu -->
-    <!-- this looks genuinely hideous please find another way to give feedback to the user from the menu that the appearance has changed (or come up with a better header design)-->
-    <!-- those border-b's also look bad -->
     <div
       id="mobile-menu"
-      class="fixed inset-0 bg-gray-200 dark:bg-zinc-800 dark:text-white flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
+      class="paper fixed inset-0 bg-gray-200 dark:bg-zinc-800 dark:text-white flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-opacity duration-300 z-1"
     >
       <!-- Menu Links -->
       <ul
@@ -165,8 +175,8 @@
         </div>
       </div>
 
-      <!-- GitHub + Discord Row -->
-      <div
+      <!-- Mobile Socials Row -->
+      <span
         id="mobile-menu-socials"
         class="flex space-x-6 mt-10 opacity-0 translate-y-[-20px] transition-all duration-500"
       >
@@ -182,6 +192,18 @@
           ></i>
         </a>
 
+        <!-- Steam -->
+        <a
+          href="https://steamcommunity.com/profiles/76561199881432729/"
+          target="_blank"
+          class="flex items-center justify-center"
+          aria-label="Discord"
+        >
+          <i
+            class="fab fa-steam text-3xl text-gray-500 dark:text-gray-300 hover:text-white"
+          ></i>
+        </a>
+
         <!-- Discord -->
         <a
           href="https://discord.gg/upV3yFUyRY"
@@ -193,7 +215,7 @@
             class="fab fa-discord text-3xl text-gray-500 dark:text-gray-300 hover:text-white"
           ></i>
         </a>
-      </div>
+      </span>
     </div>
 
     <main
@@ -205,12 +227,12 @@
       >
         <img
           src="src/assets/images/clt.png"
-          class="m-5 h-32 sm:h-40 md:h-56 lg:h-64 object-contain mx-auto cursor-pointer"
+          class="m-9 h-32 sm:h-40 md:h-56 lg:h-64 object-contain mx-auto cursor-pointer"
           alt="Logo da CLT District"
           id="interact-logo"
         />
         <article
-          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl"
+          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl inset-ring-1 ring-sky-900 shadow-2xl"
         >
           <h1 class="m-7 text-2xl sm:text-4xl max-w-xl">
             Bem-vindos ao site da CLT District!
