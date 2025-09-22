@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <script type="module" src="src/scripts/main.ts"></script>
+    <script type="module" src="src/scripts/progress.ts"></script>
     <title>CLT District</title>
   </head>
   <body>
@@ -197,7 +198,7 @@
           href="https://steamcommunity.com/profiles/76561199881432729/"
           target="_blank"
           class="flex items-center justify-center"
-          aria-label="Discord"
+          aria-label="Steam"
         >
           <i
             class="fab fa-steam text-3xl text-gray-500 dark:text-gray-300 hover:text-white"
@@ -232,7 +233,7 @@
           id="interact-logo"
         />
         <article
-          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl inset-ring-1 ring-sky-900 shadow-2xl"
+          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl outline-1 outline-gray-300 shadow-2xl"
         >
           <h1 class="m-7 text-2xl sm:text-4xl max-w-xl">
             Bem-vindos ao site da CLT District!
@@ -259,8 +260,26 @@
       <section
         class="h-screen flex justify-center items-center bg-gray-100 dark:bg-zinc-700 snap-start section-paper"
       >
-        <article>
+        <article class="space-y-10 text-center">
           <h1 class="text-3xl font-bold">Projetos e Progresso</h1>
+
+          <!-- Limbus Company -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">Limbus Company</h2>
+            <div id="progress-limbus"></div>
+          </div>
+
+          <!-- Leviathan -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">Leviatã</h2>
+            <div id="progress-leviathan"></div>
+          </div>
+
+          <!-- Distortion Detective -->
+          <div>
+            <h2 class="text-xl font-semibold mb-2">Detetive da Distorção</h2>
+            <div id="progress-distortion"></div>
+          </div>
         </article>
       </section>
 
@@ -270,12 +289,34 @@
       >
         <article>
           <h1 class="text-3xl font-bold">Perguntas Frequentes</h1>
+          <h2>
+            <br />
+            A tradução funciona no celular?
+            <br />
+            Quando vai sair a próxima atualização?
+            <br />
+            Encontrei um erro, o que faço?
+            <br />
+            Quando vai sair a próxima atualização?
+            <br />
+            Você tá solteira?
+            <br />
+          </h2>
         </article>
       </section>
 
       <!-- Section 4 -->
       <section
         class="h-screen flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start section-paper"
+      >
+        <article>
+          <h1 class="text-3xl font-bold">Outra coisa?</h1>
+        </article>
+      </section>
+
+      <!-- Section 5 -->
+      <section
+        class="h-screen flex justify-center items-center bg-gray-400 dark:bg-zinc-400 snap-start section-paper"
       >
         <article>
           <h1 class="text-3xl font-bold">Contato/Créditos/Ko-fi</h1>
