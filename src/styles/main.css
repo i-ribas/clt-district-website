@@ -8,6 +8,20 @@
   font-weight: 200;
 }
 
+@font-face {
+  font-family: "InriaSans";
+  src: url("../assets/font/InriaSans-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/font/Inter.ttf");
+}
+@theme{
+  --font-inria: InriaSans, "sans-serif";
+  --font-inter: Inter;
+  --color-header: #2F4DAF;
+  --color-background: #E9E9E9;
+}
 /* CHROME, IE SCROLLBAR LOOKS UGLY SO I KILLED THEM!!!! */
 ::-webkit-scrollbar {
   width: 0rem;

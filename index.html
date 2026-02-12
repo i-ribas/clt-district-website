@@ -15,7 +15,7 @@
   </head>
   <body>
     <header
-      class="fixed w-full p-4 bg-sky-950 border-b-5 border-gray-900 dark:border-b-1 dark:border-gray-200 z-2"
+      class="fixed w-full p-4 bg-header z-2"
     >
       <!-- Navbar -->
       <nav class="flex items-center">
@@ -27,28 +27,32 @@
               class="mr-3 h-12"
               alt="Logo da CLT District"
             />
-            <span class="text-xl font-semibold text-gray-200 mr-20">
-              CLT District
+            <span class="text-xl font-bold font-inria text-gray-200 mr-20">
+              CLT DISTRICT
             </span>
           </a>
         </div>
 
         <!-- Center: Desktop Menu -->
         <ul
-          class="hidden md:flex justify-center space-x-9 text-gray-200 font-semibold"
+          class="hidden md:flex justify-center space-x-9 text-gray-200 font-bold font-inria "
         >
           <li>
-            <a href="limbuscompany.html" class="hover:text-white"
-              >Limbus Company</a
+            <a href="limbuscompany.html" class="hover:text-white "
+              >LIMBUS COMPANY</a
             >
           </li>
           <li>
-            <a href="leviathan.html" class="hover:text-white">Leviatã</a>
+            <a href="leviathan.html" class="hover:text-white">LEVIATÃ</a>
           </li>
           <li>
-            <a href="distortiondetective.html" class="hover:text-white"
-              >Detetive da Distorção</a
-            >
+            <a href="distortiondetective.html" class="hover:text-white; ">DETETIVE DA DISTORÇÃO</a>
+          </li>
+          <li>
+            <a href="distortiondetective.html" class="hover:text-white; ">FAQ</a>
+          </li>
+          <li>
+            <a href="distortiondetective.html" class="hover:text-white; ">EQUIPE</a>
           </li>
         </ul>
 
@@ -133,20 +137,19 @@
       <!-- Menu Links -->
       <ul
         id="mobile-menu-links"
-        class="text-2xl font-semibold space-y-6 text-center opacity-0 translate-y-[-20px] transition-all duration-500"
+        class="text-2xl font-bold font-inria space-y-6 text-center opacity-0 translate-y-[-20px] transition-all duration-500"
       >
         <li class="border-b-1 border-gray-400 pb-1">
           <a href="limbuscompany.html" class="hover:text-gray-300"
-            >Limbus Company</a
+            >LIMBUS COMPANY</a
           >
         </li>
         <li class="border-b-1 border-gray-400 pb-1">
-          <a href="leviathan.html" class="hover:text-gray-300">Leviatã</a>
+          <a href="leviathan.html" class="hover:text-gray-300">LEVIATÃ</a>
         </li>
         <li class="border-b-1 border-gray-400 pb-1">
           <a href="distortiondetective.html" class="hover:text-gray-300"
-            >Detetive da Distorção</a
-          >
+            >DETETIVE DA DISTORÇÃO</a>
         </li>
       </ul>
 
@@ -224,23 +227,28 @@
     >
       <!-- Section 1 -->
       <section
-        class="relative h-screen flex flex-col justify-center items-center px-4 text-center bg-white dark:bg-zinc-800 snap-start section-paper"
+        class="flex-col md:flex-row relative h-screen flex justify-center items-center px-4 text-center bg-background dark:bg-zinc-800 snap-start section-paper"
       >
         <img
-          src="src/assets/images/clt.png"
-          class="m-9 h-32 sm:h-40 md:h-56 lg:h-64 object-contain mx-auto cursor-pointer"
+          src="src/assets/images/MODELO CARTEIRA.png"
+          class="m-9 h-32 sm:h-96 md:h-56 lg:h-max object-contain mx-auto cursor-pointer"
           alt="Logo da CLT District"
           id="interact-logo"
         />
         <article
-          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl outline-1 outline-gray-300 shadow-2xl"
+          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl"
         >
-          <h1 class="m-7 text-2xl sm:text-4xl max-w-xl">
+        
+        <div class="relative mix-blend-normal">          
+        <img src="src/assets/images/r1.png" class="absolute h-[] w-full object-none pt-10">
+        <img src="src/assets/images/r2.png" class="p-5">
+        <h1 class=" absolute z-10 m-7 pl-2 text-[18px] md:text-3xl max-w-xl text-white font-inter font-bold  top-1 pt-5 md:pt-6">
             Bem-vindos ao site da CLT District!
           </h1>
-          <h2 class="m-2">
-            A CLT District é uma equipe independente dedicada a tornar
-            acessíveis as obras da Project Moon para o público brasileiro, desde
+        </div>
+          <h2 class="m-2 font-inter">
+            A <Strong>CLT District</Strong> é uma equipe independente dedicada a tornar
+            acessíveis as obras da <Strong>Project Moon</Strong> para o público brasileiro, desde
             seus jogos até webcomics. Nosso trabalho é feito de fã para fã e não
             tem fins lucrativos.
           </h2>
@@ -254,6 +262,7 @@
         >
           <i class="fa-solid fa-arrow-down"></i>
         </div>
+        <img src="/src/assets/images/bg-main.png" class="invisible md:visible absolute bottom-0 right-0 -z-0" >
       </section>
 
       <!-- Section 2 -->
