@@ -241,14 +241,14 @@
             Bem-vindos ao site da CLT District!
           </h1>
         </div>
-          <h2 class="m-2 font-inter">
+          <h2 class="m-2 font-inter z-10">
             A <Strong>CLT District</Strong> é uma equipe independente dedicada a tornar
             acessíveis as obras da <Strong>Project Moon</Strong> para o público brasileiro, desde
             seus jogos até webcomics. Nosso trabalho é feito de fã para fã e não
             tem fins lucrativos.
           </h2>
         </article>
-
+        
         <!-- Down Arrow -->
         <div
           id="scroll-down"
@@ -256,37 +256,53 @@
         >
           <i class="fa-solid fa-arrow-down"></i>
         </div>
-        <img src="/src/assets/images/bg-main.png" class="invisible md:visible absolute bottom-0 right-0 -z-0 lg:h-100" >
+        <img src="/src/assets/images/bg-main.png" class="invisible sm:h-50 md:visible absolute bottom-0 right-0 -z-0 lg:h-100" >
       </section>
 
       <!-- Section 2 -->
       <section
-        class="flex-col md:flex-row relative h-screen flex justify-center items-center px-4 text-center bg-background dark:bg-zinc-800 snap-start bg-[url(/c5-md.png)]"
+        class="flex-col md:flex-row relative h-screen flex justify-center items-center px-4 bg-background dark:bg-zinc-800 snap-start bg-[url(/c5-md.png)] backdrop-brightness-50 "
       >
-        <img
-          src="src/assets/images/r3.png"
-          class="m-9 h-32 sm:h-96 md:h-56 lg:h-180 object-contain mx-auto cursor-pointer"
-          alt="Logo da CLT District"
-          id="interact-logo"
-        />
-        <article
-          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl"
-        >
+      <div class="absolute w-screen h-screen bg-black opacity-30">
+      </div>
+     <div class="flex-col relative w-[872px] h-[776px] left-30 top-8 flex bg-[url(/r3.png)] justify-center items-center px-4 text-center">
+    <img class="w-[454px] h-56 " src="src/assets/images/limbusLogo.png"/>
+    <p class="w-[600px] text-white text-xl font-bold font-inter m-8">”Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
+    <div class="w-72 p-1 bg-destLaran text-indigo-900 rounded-2xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-indigo-900 hover:text-destLaran">
+      <p class="text-center justify-start  text-xl font-bold font-InriaSans mx-auto cursor-pointer" id="botaoTraducao">ACESSAR TRADUÇÃO</p>
+    </div>
+  </div>
         
-        <div class="relative mix-blend-normal">          
-        <img src="src/assets/images/r1.png" class="absolute h-[] w-full object-none pt-10">
-        <img src="src/assets/images/r2.png" class="p-8 md:p-5 ">
-        <h1 class=" absolute z-10 m-7 pl-2 text-[16px] md:text-3xl max-w-xl text-white font-inter font-bold  top-1 pt-5 md:pt-6">
-            Bem-vindos ao site da CLT District!
-          </h1>
+  
+        <article
+          class=" mx-auto flex flex-col text-base sm:text-xl max-w-md sm:max-w-2xl"
+        >
+        <div class="flex-col relative justify-center items-center px-4">
+          <p class="justify-start text-destLaran text-xl font-bold font-inter">Última atualização</p>
+          <p class="justify-start text-white text-3xl font-bold font-inter">Atualização 5.0.1</p>
+          <div class="w-[458px] h-[2.70px] bg-white"></div>
+          <div class="size-96 justify-start">
+            <span class="text-white text-xl font-bold font-inter">HISTÓRIA<br/></span>
+            <ul class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2 ">
+              <li>Primeira parte do Canto 5 traduzida;</li>
+              <li>Segunda parte do Canto 5 traduzida;</li>
+              <li>Terceira parte do Canto 5 traduzida;</li>
+            </ul>
+            <span class="text-white text-xl font-bold font-inter">IDENTIDADES<br/></span>
+            <ul class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2 ">
+              <li>Kit e história da Capitã Ishmael traduzidos;</li>
+              <li>Kit e história do Heathcliff Queequeg traduzidos;</li>
+              <li>Kit e história do Yi Sang Starbuck traduzidos;</li>
+              <li>Uns gato pingado tb.</li>
+            </ul>
+          <span class="text-white text-xl font-bold font-inter">GERAL<br/>
+            <ul class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2 ">
+              <li>Correção de uns treco alí;</li>
+              <li>Ajuste de uns negócio aqui;</li>
+              <li>E mais!</li>
+            </ul>
+          
         </div>
-          <h2 class="m-2 font-inter">
-            A <Strong>CLT District</Strong> é uma equipe independente dedicada a tornar
-            acessíveis as obras da <Strong>Project Moon</Strong> para o público brasileiro, desde
-            seus jogos até webcomics. Nosso trabalho é feito de fã para fã e não
-            tem fins lucrativos.
-          </h2>
-          <h3 class="m-6 text-gray-400">© 2025 CLT District</h3>
         </article>
 
         <!-- Down Arrow -->
@@ -296,7 +312,7 @@
         >
           <i class="fa-solid fa-arrow-down"></i>
         </div>
-        <img src="/src/assets/images/r2.png" class="absolute top-2 left-0 -z-0 -rotate-240 -translate-x-38 translate-y-25" >
+        <img src="/src/assets/images/r2.png" class="absolute  top-2 left-0 -z-0 -rotate-240 -translate-x-38 translate-y-25" >
         <img src="/src/assets/images/r1.png" class="absolute top-2 left-0 -z-0 -rotate-220 -translate-x-25 translate-y-15" >
         </section>
 

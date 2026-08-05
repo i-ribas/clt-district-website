@@ -21,6 +21,7 @@
   --font-inter: Inter;
   --color-header: #2F4DAF;
   --color-background: #E9E9E9;
+  --color-destLaran: #E5BE31;
 }
 /* CHROME, IE SCROLLBAR LOOKS UGLY SO I KILLED THEM!!!! */
 ::-webkit-scrollbar {
