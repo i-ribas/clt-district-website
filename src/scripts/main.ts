@@ -55,8 +55,11 @@ window.addEventListener("DOMContentLoaded", () => {
   if (interactLogo) {
     interactLogo.addEventListener("click", () => {
       const sounds = [
-        "./src/assets/audio/huh.m4a",
-        "./src/assets/audio/scream.m4a",
+        "./src/assets/audio/vb.mp3",
+        "./src/assets/audio/lc.mp3",
+        "./src/assets/audio/sq.mp3",
+        "./src/assets/audio/d.mp3",
+
       ];
 
       const sfxRandomIndex = Math.floor(Math.random() * sounds.length);
