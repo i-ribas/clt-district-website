@@ -16,12 +16,12 @@
   font-family: "Inter";
   src: url("../assets/font/Inter.ttf");
 }
-@theme{
+@theme {
   --font-inria: InriaSans, "sans-serif";
   --font-inter: Inter;
-  --color-header: #2F4DAF;
-  --color-background: #E9E9E9;
-  --color-destLaran: #E5BE31;
+  --color-header: #2f4daf;
+  --color-background: #e9e9e9;
+  --color-destLaran: #e5be31;
 }
 /* CHROME, IE SCROLLBAR LOOKS UGLY SO I KILLED THEM!!!! */
 ::-webkit-scrollbar {
@@ -85,7 +85,9 @@ body {
   text-align: center;
   background-color: #d1d5db; /* gray-300 */
   color: #111827; /* gray-900 */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .segment:not(:last-child) {
