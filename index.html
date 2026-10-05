@@ -13,8 +13,8 @@
     <script type="module" src="src/scripts/progress.ts"></script>
     <title>CLT District</title>
   </head>
-  <body>
-    <header class="fixed w-full p-4 bg-header z-2">
+  <body class="h-dvh flex flex-col">
+    <header class="w-full shrink-0 p-4 bg-header z-2">
       <!-- Navbar -->
       <nav class="flex items-center">
         <!-- Left: Logo + Title -->
@@ -228,59 +228,66 @@
     </div>
 
     <main
-      class="snap-y snap-mandatory h-screen overflow-y-auto scroll-smooth dark:text-white"
+      class="snap-y snap-mandatory flex-1 min-h-0 overflow-y-auto scroll-smooth dark:text-white"
     >
       <!-- Section 1 -->
       <section
         aria-labelledby="welcome-title"
-        class="flex-col md:flex-row relative h-screen flex justify-center items-center px-4 text-center bg-background dark:bg-zinc-800 snap-start section-paper"
+        class="relative flex h-full snap-start flex-col items-center px-4 pb-4 text-center bg-background dark:bg-zinc-800 section-paper"
       >
-        <img
-          src="src/assets/images/MODELO%20CARTEIRA.png"
-          class="m-9 h-32 sm:h-96 md:h-56 lg:h-160 object-contain mx-auto cursor-pointer"
-          alt="Modelo de carteira da CLT District"
-          id="interact-logo"
-        />
-        <article
-          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl"
+        <div
+          class="flex min-h-0 w-full flex-1 flex-col items-center justify-center gap-2 md:flex-row md:gap-8"
         >
-          <div class="relative mix-blend-normal">
-            <img
-              src="src/assets/images/r1.png"
-              class="absolute h-auto w-full object-none pt-10"
-              alt="Banner Verde"
-              aria-hidden="true"
-            />
-            <img
-              src="src/assets/images/r2.png"
-              class="p-8 md:p-5"
-              alt="Banner Amarelo"
-              aria-hidden="true"
-            />
-            <h1
-              id="welcome-title"
-              class="absolute left-[6%] right-[6%] top-1/2 -translate-y-1/2 text-white font-inter font-bold leading-tight text-[4vw] md:text-2xl xl:text-3xl"
-            >
-              Bem-vindos ao site da CLT District!
-            </h1>
-          </div>
-          <h2 class="m-2 font-inter z-10">
-            A <strong>CLT District</strong> é uma equipe independente dedicada a
-            tornar acessíveis as obras da <strong>Project Moon</strong> para o
-            público brasileiro, desde seus jogos até webcomics. Nosso trabalho é
-            feito de fã para fã e não tem fins lucrativos.
-          </h2>
-        </article>
+          <img
+            src="src/assets/images/MODELO%20CARTEIRA.png"
+            class="m-2 h-32 min-h-32 shrink object-contain cursor-pointer sm:h-96 md:m-9 md:h-56 md:max-h-full lg:h-160"
+            alt="Modelo de carteira da CLT District"
+            id="interact-logo"
+          />
+
+          <article
+            class="flex min-w-0 shrink flex-col items-center text-sm sm:text-xl max-w-md sm:max-w-2xl md:min-w-0"
+          >
+            <div class="relative mix-blend-normal">
+              <img
+                src="src/assets/images/r1.png"
+                class="absolute h-auto w-full object-none pt-10"
+                alt="Banner Verde"
+                aria-hidden="true"
+              />
+              <img
+                src="src/assets/images/r2.png"
+                class="p-8 md:p-5"
+                alt="Banner Amarelo"
+                aria-hidden="true"
+              />
+              <h1
+                id="welcome-title"
+                class="absolute left-[6%] right-[6%] top-1/2 -translate-y-1/2 text-white font-inter font-bold leading-tight text-[4vw] md:text-2xl xl:text-3xl"
+              >
+                Bem-vindos ao site da CLT District!
+              </h1>
+            </div>
+            <h2 class="m-2 font-inter z-1">
+              A <strong>CLT District</strong> é uma equipe independente dedicada
+              a tornar acessíveis as obras da <strong>Project Moon</strong> para
+              o público brasileiro, desde seus jogos até webcomics. Nosso
+              trabalho é feito de fã para fã e não tem fins lucrativos.
+            </h2>
+          </article>
+        </div>
 
         <!-- Down Arrow -->
         <div
-          class="scroll-arrow absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-3xl text-gray-500 dark:text-gray-300"
+          class="scroll-arrow shrink-0 animate-bounce cursor-pointer pt-2 text-3xl text-gray-500 dark:text-gray-300"
         >
           <i class="fa-solid fa-arrow-down"></i>
         </div>
+
+        <!-- Blue Banner -->
         <img
           src="/src/assets/images/bg-main.png"
-          class="invisible sm:h-50 md:visible absolute bottom-0 right-0 -z-0 lg:h-100"
+          class="invisible sm:h-50 md:visible absolute bottom-0 right-0 lg:h-100"
           alt=""
           aria-hidden="true"
         />
@@ -289,7 +296,7 @@
       <!-- Section 2 -->
       <section
         aria-labelledby="limbus-section-title"
-        class="flex-col md:flex-row relative h-screen flex justify-center items-center px-4 bg-background dark:bg-zinc-800 snap-start bg-[url(/c5-md.png)] backdrop-brightness-50 section-paper"
+        class="flex-col md:flex-row relative h-full flex justify-center items-center px-4 bg-background dark:bg-zinc-800 snap-start bg-[url(/c5-md.png)] backdrop-brightness-50 section-paper"
       >
         <h2 id="limbus-section-title" class="sr-only">Limbus Company</h2>
         <div class="absolute w-screen h-screen bg-black opacity-30"></div>
@@ -392,7 +399,7 @@
       <!-- Section 3 -->
       <section
         aria-labelledby="faq-title"
-        class="h-screen flex justify-center items-center bg-gray-200 dark:bg-zinc-600 snap-start section-paper"
+        class="h-full flex justify-center items-center bg-gray-200 dark:bg-zinc-600 snap-start section-paper"
       >
         <article>
           <h2 id="faq-title" class="text-3xl font-bold">
@@ -424,7 +431,7 @@
       <!-- Section 4 -->
       <section
         aria-labelledby="other-title"
-        class="h-screen flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start section-paper"
+        class="h-full flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start section-paper"
       >
         <article>
           <h2 id="other-title" class="text-3xl font-bold">Outra coisa?</h2>
