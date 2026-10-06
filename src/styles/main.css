@@ -24,10 +24,16 @@
   --color-destLaran: #e5be31;
 }
 
-/* Hide the CLT logo on short screens. Possibly hacky*/
+/* Hide certain elements on short screens. Possibly hacky*/
 @media (width <= 500px) and (height <= 700px), (height <= 575px) {
   #interact-logo {
     /* Did not opt for screenreader friendly option due to judging it as unnecessary */
+    display: none;
+  }
+}
+
+@media (width <= 300px) and (height <= 400px), (height <= 375px) {
+  .scroll-arrow {
     display: none;
   }
 }
