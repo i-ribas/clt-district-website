@@ -41,10 +41,10 @@ window.addEventListener("DOMContentLoaded", () => {
       html.classList.toggle("dark");
       localStorage.setItem(
         "theme",
-        html.classList.contains("dark") ? "dark" : "light"
+        html.classList.contains("dark") ? "dark" : "light",
       );
       updateThemeIcons();
-    })
+    }),
   );
 
   // ======================
@@ -59,7 +59,6 @@ window.addEventListener("DOMContentLoaded", () => {
         "./src/assets/audio/lc.mp3",
         "./src/assets/audio/sq.mp3",
         "./src/assets/audio/d.mp3",
-
       ];
 
       const sfxRandomIndex = Math.floor(Math.random() * sounds.length);
@@ -70,9 +69,14 @@ window.addEventListener("DOMContentLoaded", () => {
   // ======================
   // SCROLL DOWN ARROW
   // ======================
-  document.getElementById("scroll-down")?.addEventListener("click", () => {
-    const nextSection = document.querySelector("main section:nth-child(2)");
-    nextSection?.scrollIntoView({ behavior: "smooth" });
+  document.querySelectorAll(".scroll-arrow")?.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const currentSection = btn.closest("section");
+      if (currentSection) {
+        const nextSection = currentSection.nextElementSibling;
+        if (nextSection) nextSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   });
 
   // ======================
@@ -138,7 +142,7 @@ window.addEventListener("DOMContentLoaded", () => {
     mobileMenu
       .querySelectorAll("a")
       .forEach((link) =>
-        link.addEventListener("click", () => toggleMenu(true))
+        link.addEventListener("click", () => toggleMenu(true)),
       );
   }
 

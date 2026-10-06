@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
@@ -13,10 +13,8 @@
     <script type="module" src="src/scripts/progress.ts"></script>
     <title>CLT District</title>
   </head>
-  <body>
-    <header
-      class="fixed w-full p-4 bg-header z-2"
-    >
+  <body class="h-dvh flex flex-col">
+    <header class="w-full shrink-0 p-4 bg-header z-2">
       <!-- Navbar -->
       <nav class="flex items-center">
         <!-- Left: Logo + Title -->
@@ -35,16 +33,20 @@
 
         <!-- Center: Desktop Menu -->
         <ul
-          class="hidden md:flex justify-center space-x-9 text-gray-200 font-bold font-inria "
+          class="hidden md:flex justify-center space-x-9 text-gray-200 font-bold font-inria"
         >
           <li>
-            <a href="limbuscompany.html" class="hover:text-white ">LIMBUS COMPANY</a>
+            <a href="limbuscompany.html" class="hover:text-white"
+              >LIMBUS COMPANY</a
+            >
           </li>
           <li>
             <a href="leviathan.html" class="hover:text-white">LEVIATÃ</a>
           </li>
           <li>
-            <a href="distortiondetective.html" class="hover:text-white; ">DETETIVE DA DISTORÇÃO</a>
+            <a href="distortiondetective.html" class="hover:text-white"
+              >DETETIVE DA DISTORÇÃO</a
+            >
           </li>
         </ul>
 
@@ -91,7 +93,10 @@
           </span>
 
           <button
+            type="button"
             role="switch"
+            aria-checked="false"
+            aria-label="Alternar aparência"
             id="theme-toggle"
             class="cursor-pointer relative w-14 h-8 rounded-full bg-gray-300 dark:bg-gray-600 transition"
           >
@@ -105,7 +110,11 @@
 
         <!-- Mobile Hamburger -->
         <button
+          type="button"
           id="hamburger"
+          aria-label="Abrir menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
           class="md:hidden relative w-15 h-10 flex flex-col justify-center items-center gap-2 group"
         >
           <span
@@ -132,13 +141,17 @@
         class="text-2xl font-bold font-inria space-y-6 text-center opacity-0 translate-y-[-20px] transition-all duration-500"
       >
         <li class="border-b-1 border-gray-400 pb-1">
-          <a href="limbuscompany.html" class="hover:text-gray-300">LIMBUS COMPANY</a>
+          <a href="limbuscompany.html" class="hover:text-gray-300"
+            >LIMBUS COMPANY</a
+          >
         </li>
         <li class="border-b-1 border-gray-400 pb-1">
           <a href="leviathan.html" class="hover:text-gray-300">LEVIATÃ</a>
         </li>
         <li class="border-b-1 border-gray-400 pb-1">
-          <a href="distortiondetective.html" class="hover:text-gray-300">DETETIVE DA DISTORÇÃO</a>
+          <a href="distortiondetective.html" class="hover:text-gray-300"
+            >DETETIVE DA DISTORÇÃO</a
+          >
         </li>
       </ul>
 
@@ -152,7 +165,10 @@
         >
           <span class="text-lg">Aparência</span>
           <button
+            type="button"
             role="switch"
+            aria-checked="false"
+            aria-label="Alternar aparência"
             id="theme-toggle-mobile"
             class="cursor-pointer relative w-14 h-8 rounded-full bg-gray-300 dark:bg-gray-600"
           >
@@ -212,110 +228,183 @@
     </div>
 
     <main
-      class="snap-y snap-mandatory h-screen overflow-y-auto scroll-smooth dark:text-white"
+      class="snap-y snap-mandatory flex-1 min-h-0 overflow-y-auto scroll-smooth dark:text-white"
     >
       <!-- Section 1 -->
       <section
-        class=" z-1 flex-col md:flex-row relative h-screen flex justify-center items-center px-4 text-center bg-background dark:bg-zinc-800 snap-start section-paper"
+        aria-labelledby="welcome-title"
+        class="relative flex h-full snap-start flex-col items-center px-4 pb-4 text-center bg-background dark:bg-zinc-800 section-paper"
       >
-        <img
-          src="src/assets/images/MODELO CARTEIRA.png"
-          class="m-9 h-32 sm:h-96 md:h-56 lg:h-160 object-contain mx-auto cursor-pointer"
-          alt="Logo da CLT District"
-          id="interact-logo"
-        />
-        <article
-          class="mx-auto flex flex-col items-center text-base sm:text-xl max-w-md sm:max-w-2xl"
+        <div
+          class="flex min-h-0 w-full flex-1 flex-col items-center justify-center gap-2 md:flex-row md:gap-8"
         >
-        
-        <div class="relative mix-blend-normal">          
-        <img src="src/assets/images/r1.png" class="absolute h-[] w-full object-none pt-10">
-        <img src="src/assets/images/r2.png" class="p-8 md:p-5 ">
-        <h1 class=" absolute z-10 m-7 pl-2 text-[16px] md:text-3xl max-w-xl text-white font-inter font-bold  top-1 pt-5 md:pt-6">
-            Bem-vindos ao site da CLT District!
-          </h1>
+          <img
+            src="src/assets/images/MODELO%20CARTEIRA.png"
+            class="m-2 h-32 min-h-0 object-contain cursor-pointer sm:h-96 md:m-9 md:h-56 md:max-h-full lg:h-160"
+            alt="Modelo de carteira da CLT District"
+            id="interact-logo"
+          />
+
+          <article
+            class="flex min-w-0 shrink flex-col items-center text-sm sm:text-xl max-w-md sm:max-w-2xl md:min-w-0"
+          >
+            <div class="relative mix-blend-normal">
+              <img
+                src="src/assets/images/r1.png"
+                class="absolute h-auto w-full object-none pt-10"
+                alt="Banner Verde"
+                aria-hidden="true"
+              />
+              <img
+                src="src/assets/images/r2.png"
+                class="p-8 md:p-5"
+                alt="Banner Amarelo"
+                aria-hidden="true"
+              />
+              <h1
+                id="welcome-title"
+                class="absolute left-[6%] right-[6%] top-1/2 -translate-y-1/2 text-white font-inter font-bold leading-tight text-[4vw] md:text-2xl xl:text-3xl"
+              >
+                Bem-vindos ao CLT District!
+              </h1>
+            </div>
+            <h2 class="m-2 font-inter z-1">
+              A <strong>CLT District</strong> é uma equipe independente dedicada
+              a tornar acessíveis as obras da <strong>Project Moon</strong> para
+              o público brasileiro, desde seus jogos até webcomics. Nosso
+              trabalho é feito de fã para fã e não tem fins lucrativos.
+            </h2>
+          </article>
         </div>
-          <h2 class="m-2 font-inter z-10">
-            A <Strong>CLT District</Strong> é uma equipe independente dedicada a tornar
-            acessíveis as obras da <Strong>Project Moon</Strong> para o público brasileiro, desde
-            seus jogos até webcomics. Nosso trabalho é feito de fã para fã e não
-            tem fins lucrativos.
-          </h2>
-        </article>
-        
+
         <!-- Down Arrow -->
         <div
-          id="scroll-down"
-          class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-3xl text-gray-500 dark:text-gray-300"
+          class="scroll-arrow shrink-0 animate-bounce cursor-pointer pt-2 text-3xl text-gray-500 dark:text-gray-300"
         >
           <i class="fa-solid fa-arrow-down"></i>
         </div>
-        <img src="/src/assets/images/bg-main.png" class="invisible sm:h-50 md:visible absolute bottom-0 right-0 -z-0 lg:h-100" >
+
+        <!-- Blue Banner -->
+        <img
+          src="/src/assets/images/bg-main.png"
+          class="invisible sm:h-50 md:visible absolute bottom-0 right-0 lg:h-100"
+          alt=""
+          aria-hidden="true"
+        />
       </section>
 
       <!-- Section 2 -->
       <section
-        class="flex-col md:flex-row relative h-screen flex justify-center items-center px-4 bg-background dark:bg-zinc-800 snap-start bg-[url(/c5-md.png)] backdrop-brightness-50 "
+        aria-labelledby="limbus-section-title"
+        class="flex-col md:flex-row relative h-full flex justify-center items-center px-4 bg-background dark:bg-zinc-800 snap-start bg-[url(/c5-md.png)] backdrop-brightness-50 section-paper"
       >
-      <div class="absolute w-screen h-screen bg-black opacity-30">
-      </div>
-     <div class="flex-col relative w-[872px] h-[776px] left-30 top-8 flex bg-[url(/r3.png)] justify-center items-center px-4 text-center">
-    <img class="w-[454px] h-56 " src="src/assets/images/limbusLogo.png"/>
-    <p class="w-[600px] text-white text-xl font-bold font-inter m-8">”Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
-    <div class="w-72 p-1 bg-destLaran text-indigo-900 rounded-2xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-indigo-900 hover:text-destLaran">
-      <p class="text-center justify-start  text-xl font-bold font-InriaSans mx-auto cursor-pointer" id="botaoTraducao">ACESSAR TRADUÇÃO</p>
-    </div>
-  </div>
-        
-  
-        <article
-          class=" mx-auto flex flex-col text-base sm:text-xl max-w-md sm:max-w-2xl"
+        <h2 id="limbus-section-title" class="sr-only">Limbus Company</h2>
+        <div class="absolute w-screen h-screen bg-black opacity-30"></div>
+        <div
+          class="flex-col relative w-[872px] h-[776px] left-30 top-8 flex bg-[url(/r3.png)] justify-center items-center px-4 text-center"
         >
-        <div class="flex-col relative justify-center items-center px-4">
-          <p class="justify-start text-destLaran text-xl font-bold font-inter">Última atualização</p>
-          <p class="justify-start text-white text-3xl font-bold font-inter">Atualização 5.0.1</p>
-          <div class="w-[458px] h-[2.70px] bg-white"></div>
-          <div class="size-96 justify-start">
-            <span class="text-white text-xl font-bold font-inter">HISTÓRIA<br/></span>
-            <ul class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2 ">
-              <li>Primeira parte do Canto 5 traduzida;</li>
-              <li>Segunda parte do Canto 5 traduzida;</li>
-              <li>Terceira parte do Canto 5 traduzida;</li>
-            </ul>
-            <span class="text-white text-xl font-bold font-inter">IDENTIDADES<br/></span>
-            <ul class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2 ">
-              <li>Kit e história da Capitã Ishmael traduzidos;</li>
-              <li>Kit e história do Heathcliff Queequeg traduzidos;</li>
-              <li>Kit e história do Yi Sang Starbuck traduzidos;</li>
-              <li>Uns gato pingado tb.</li>
-            </ul>
-          <span class="text-white text-xl font-bold font-inter">GERAL<br/>
-            <ul class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2 ">
-              <li>Correção de uns treco alí;</li>
-              <li>Ajuste de uns negócio aqui;</li>
-              <li>E mais!</li>
-            </ul>
-          
+          <img
+            class="w-[454px] h-56"
+            src="src/assets/images/limbusLogo.png"
+            alt="Limbus Company"
+          />
+          <p class="w-[600px] text-white text-xl font-bold font-inter m-8">
+            ”Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+          </p>
+          <div
+            class="w-72 p-1 bg-destLaran text-indigo-900 rounded-2xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-indigo-900 hover:text-destLaran"
+          >
+            <p
+              class="text-center justify-start text-xl font-bold font-InriaSans mx-auto cursor-pointer"
+              id="botaoTraducao"
+            >
+              ACESSAR TRADUÇÃO
+            </p>
+          </div>
         </div>
+
+        <article
+          aria-labelledby="latest-update-title"
+          class="mx-auto flex flex-col text-base sm:text-xl max-w-md sm:max-w-2xl"
+        >
+          <div class="flex-col relative justify-center items-center px-4">
+            <p
+              class="justify-start text-destLaran text-xl font-bold font-inter"
+            >
+              Última atualização
+            </p>
+            <h3
+              id="latest-update-title"
+              class="justify-start text-white text-3xl font-bold font-inter"
+            >
+              Atualização 5.0.1
+            </h3>
+            <div class="w-[458px] h-[2.70px] bg-white" aria-hidden="true"></div>
+
+            <div class="size-96 justify-start">
+              <h4 class="text-white text-xl font-bold font-inter">HISTÓRIA</h4>
+              <ul
+                class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2"
+              >
+                <li>Primeira parte do Canto 5 traduzida;</li>
+                <li>Segunda parte do Canto 5 traduzida;</li>
+                <li>Terceira parte do Canto 5 traduzida;</li>
+              </ul>
+
+              <h4 class="text-white text-xl font-bold font-inter">
+                IDENTIDADES
+              </h4>
+              <ul
+                class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2"
+              >
+                <li>Kit e história da Capitã Ishmael traduzidos;</li>
+                <li>Kit e história do Heathcliff Queequeg traduzidos;</li>
+                <li>Kit e história do Yi Sang Starbuck traduzidos;</li>
+                <li>Uns gato pingado tb.</li>
+              </ul>
+
+              <h4 class="text-white text-xl font-bold font-inter">GERAL</h4>
+              <ul
+                class="list-disc text-white text-xl font-bold font-inter mb-2 mt-2"
+              >
+                <li>Correção de uns treco alí;</li>
+                <li>Ajuste de uns negócio aqui;</li>
+                <li>E mais!</li>
+              </ul>
+            </div>
+          </div>
         </article>
 
         <!-- Down Arrow -->
         <div
-          id="scroll-down"
-          class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-3xl text-gray-500 dark:text-gray-300"
+          class="scroll-arrow absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-3xl text-gray-500 dark:text-gray-300"
         >
           <i class="fa-solid fa-arrow-down"></i>
         </div>
-        <img src="/src/assets/images/r2.png" class="absolute  top-2 left-0 -z-0 -rotate-240 -translate-x-38 translate-y-25" >
-        <img src="/src/assets/images/r1.png" class="absolute top-2 left-0 -z-0 -rotate-220 -translate-x-25 translate-y-15" >
-        </section>
+        <img
+          src="/src/assets/images/r2.png"
+          class="absolute top-2 left-0 -z-0 -rotate-240 -translate-x-38 translate-y-25"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          src="/src/assets/images/r1.png"
+          class="absolute top-2 left-0 -z-0 -rotate-220 -translate-x-25 translate-y-15"
+          alt=""
+          aria-hidden="true"
+        />
+      </section>
 
       <!-- Section 3 -->
       <section
-        class="h-screen flex justify-center items-center bg-gray-200 dark:bg-zinc-600 snap-start section-paper"
+        aria-labelledby="faq-title"
+        class="h-full flex justify-center items-center bg-gray-200 dark:bg-zinc-600 snap-start section-paper"
       >
         <article>
-          <h1 class="text-3xl font-bold">Perguntas Frequentes</h1>
+          <h2 id="faq-title" class="text-3xl font-bold">
+            Perguntas Frequentes
+          </h2>
           <h2>
             <br />
             A tradução funciona no celular?
@@ -330,23 +419,41 @@
             <br />
           </h2>
         </article>
+
+        <!-- Down Arrow -->
+        <div
+          class="scroll-arrow absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-3xl text-gray-500 dark:text-gray-300"
+        >
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
       </section>
 
       <!-- Section 4 -->
       <section
-        class="h-screen flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start section-paper"
+        aria-labelledby="other-title"
+        class="h-full flex justify-center items-center bg-gray-300 dark:bg-zinc-500 snap-start section-paper"
       >
         <article>
-          <h1 class="text-3xl font-bold">Outra coisa?</h1>
+          <h2 id="other-title" class="text-3xl font-bold">Outra coisa?</h2>
         </article>
+
+        <!-- Down Arrow -->
+        <div
+          class="scroll-arrow absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-3xl text-gray-500 dark:text-gray-300"
+        >
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
       </section>
 
       <!-- Section 5 -->
       <section
+        aria-labelledby="contact-title"
         class="h-screen flex justify-center items-center bg-gray-400 dark:bg-zinc-400 snap-start section-paper"
       >
         <article>
-          <h1 class="text-3xl font-bold">Contato/Créditos/Ko-fi</h1>
+          <h2 id="contact-title" class="text-3xl font-bold">
+            Contato/Créditos/Ko-fi
+          </h2>
         </article>
       </section>
     </main>
