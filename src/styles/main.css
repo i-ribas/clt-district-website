@@ -23,6 +23,15 @@
   --color-background: #e9e9e9;
   --color-destLaran: #e5be31;
 }
+
+/* Hide the CLT logo on short screens. Possibly hacky*/
+@media (width <= 500px) and (height <= 700px), (height <= 575px) {
+  #interact-logo {
+    /* Did not opt for screenreader friendly option due to judging it as unnecessary */
+    display: none;
+  }
+}
+
 /* CHROME, IE SCROLLBAR LOOKS UGLY SO I KILLED THEM!!!! */
 ::-webkit-scrollbar {
   width: 0rem;
