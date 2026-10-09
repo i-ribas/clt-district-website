@@ -7,10 +7,10 @@ window.addEventListener("DOMContentLoaded", () => {
   if (interactLogo) {
     interactLogo.addEventListener("click", () => {
       const sounds = [
-        "./src/assets/audio/vb.mp3",
-        "./src/assets/audio/lc.mp3",
-        "./src/assets/audio/sq.mp3",
-        "./src/assets/audio/d.mp3",
+        "./src/assets/audio/beachvolleyburr.mp3",
+        "./src/assets/audio/dq_limbuscompany.mp3",
+        "./src/assets/audio/dq_esquilo.mp3",
+        "./src/assets/audio/vg_danteh.mp3",
       ];
 
       const sfxRandomIndex = Math.floor(Math.random() * sounds.length);
